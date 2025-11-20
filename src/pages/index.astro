@@ -11,8 +11,7 @@ import "../css/main.css";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 const url = "https://qeoxxkgbtrpnlhjhgkqx.supabase.co/rest/v1/Cases?";
-const key =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlb3h4a2didHJwbmxoamhna3F4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5NTAwNjgsImV4cCI6MjA3ODUyNjA2OH0.6_XM-4eljkeXa7wm8GXbTRTDW6-kYUAbBqbB8aAQeic";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlb3h4a2didHJwbmxoamhna3F4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5NTAwNjgsImV4cCI6MjA3ODUyNjA2OH0.6_XM-4eljkeXa7wm8GXbTRTDW6-kYUAbBqbB8aAQeic";
 const options = {
   headers: {
     apikey: key,
@@ -30,17 +29,10 @@ const data = await fetch(url, options).then((res) => res.json());
     <section class="intro-section">
       <h2>Packaging is more than <br />just brown cardboard</h2>
       <p>
-        At Tóki, we are committed to creating packaging solutions based on what
-        you as a company want. Together, we develop a packaging solution that
-        your users will come to love. <br />
-        <br /> The packaging is the first thing a user sees before they open the
-        product — let’s create a great first impression for your customers.
+        At Tóki, we are committed to creating packaging solutions based on what you as a company want. Together, we develop a packaging solution that your users will come to love. <br />
+        <br /> The packaging is the first thing a user sees before they open the product — let’s create a great first impression for your customers.
       </p>
-      <img
-        class="image Gemini"
-        src="assets/Firefly_Gemini Flash_packages(packaging)  in a slight minimalisitc design on a surface . the colors are sl 716179 1.png"
-        alt=""
-      />
+      <img class="/assets/img-packaging.webp" alt="" />
     </section>
     <div class="line"></div>
     <section class="forside-sections">
@@ -53,10 +45,8 @@ const data = await fetch(url, options).then((res) => res.json());
 
       <section>
         <h3>Want get in touch?</h3>
-        <p class="intro">
-          Click here so we can guide you to find the best packaging solutions .
-        </p>
-        <img class="image" src="assets/Group 60.png" alt="" />
+        <p class="intro">Click here so we can guide you to find the best packaging solutions .</p>
+        <img class="image" src="assets/get-in-touch.webp" alt="" />
         <div class="contact-us">
           <Contact />
         </div>
@@ -74,7 +64,7 @@ const data = await fetch(url, options).then((res) => res.json());
       <section>
         <h3>About Us</h3>
         <p class="intro">Read more about the founders behind Tóki.</p>
-        <img class="image" src="assets/About.png" alt="" />
+        <img class="image" src="assets/about.webp" alt="" />
         <div class="read-more">
           <ReadFlow />
         </div>
