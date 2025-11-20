@@ -1,38 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// import "../css/main.css";  // fjernet — Layout importerer allerede main.css
 ---
 
 <Layout>
-  <main>
+  <main class="page-content">
+    <h1 class"H1nordiclamps">Nordic Lamps</h1>
+
     <div>
-      <h1>Nordic Lamps</h1>
-      <p>
+      <p class="Nordiclampsptext">
         Nordic Lamps is a brand that Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. & More Information
+        magna aliqua.
       </p>
-      <a href="/pages/cases">& More information</a>
+
+      <a href="/cases">& More information</a>
     </div>
+
     <img src="/assets/noblelamp.webp" alt="Brand" />
+    <div></div>
     <div>
+      <img src="/assets/lamp-kit.webp" alt="Brand" />
       <h2>Before Tóki design</h2>
-      <img src="/assets/lamp.webp" alt="Before" />
     </div>
     <div>
-      <h2>After Tóki design</h2>
-      <img src="/assets/afterp.webp" alt="Brand" />
+      <img src="/assets/noblelamp.webp" alt="Openbox" />
+      <h2 class="After">After Tóki design</h2>
     </div>
-    <div>
-      <p>
-        We rearranged the packaging for Nordic lamps Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore,
-        dolor sit amet, consectetur
-      </p>
-      <img src="/assets/lamp-kit.webp" alt="Openbox" />
-    </div>
+
+    <img src="/assets/lamp.webp" class="Lampbox" alt="lampopen" />
+    <p>
+      Nordic Lamps is a brand that Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      sed do eiusmod, ut labore et dolore magna aliqua.
+    </p>
     <div>
       <p>
         Nordic Lamps is a brand that Lorem ipsum dolor sit amet, consectetur
@@ -41,13 +45,17 @@ import Layout from "../layouts/Layout.astro";
         aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna
         aliqua. sed do eiusmod, ut labore et dolore magna aliqua.
       </p>
-      <img src="/assets/nordiclampslogo.webp" alt="nordiclampslogo" />
-      <p>Logo Design:</p>
+
       <p>
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed
-        do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
-        eiusmod tempor incididunt ut labore
+        Logo Design: sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. sed do eiusmod tempor incididunt ut labore
       </p>
+      <img
+        src="/assets/nordiclampslogo.webp"
+        class="Nordiclampslogo"
+        alt="nordiclampslogo"
+      />
     </div>
     <div>
       <img src="/assets/kass-ud.webp" alt="Totalyopenbox" />
@@ -60,15 +68,15 @@ import Layout from "../layouts/Layout.astro";
       </p>
     </div>
 
-    <div class="cta">Contact us</div>
+    <a href="/contact" class="cta">Contact us</a>
   </main>
 </Layout>
 
 <style>
-  /* --- MOBILE VERSION --- */
+  /* --- PAGE-SPECIFIC STYLES --- */
 
-  body {
-    margin: 11rem;
+  .page-content {
+    margin: 11rem; /* flyttet fra body til denne wrapper, så Header bevarer sit layout */
   }
 
   @media (max-width: 768px) {
@@ -80,6 +88,7 @@ import Layout from "../layouts/Layout.astro";
       font-size: 18px;
       border-radius: 8px;
       transition: background-color 0.25s ease; /* smooth hover */
+      display: inline-block;
     }
 
     .cta:hover {
@@ -91,6 +100,160 @@ import Layout from "../layouts/Layout.astro";
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       padding: 2px;
+    }
+  }
+
+  /* Desktop-focused layout, images og spacing */
+
+  .page-content {
+    max-width: 1100px;
+    margin: 6rem auto 4rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    color: #151514;
+  }
+
+  .After {
+    margin-top: 110px;
+  }
+
+  .Nordiclampsptext {
+    margin-left: 700px;
+  }
+
+  .page-content h1 {
+    font-size: 2.6rem;
+    line-height: 1.05;
+    color: #264d43;
+    margin: 0 0 1.25rem 0;
+    font-weight: 400;
+  }
+
+  .page-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .page-content a {
+    color: inherit;
+  }
+
+  a {
+    margin-left: 700px;
+  }
+
+  /* Gør billeder responsive og med afrundede hjørner */
+  .page-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.25rem 0;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  /* CTA */
+  .cta {
+    display: inline-block;
+    background-color: #274d44;
+    color: #fff;
+    padding: 12px 26px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  .cta:hover {
+    background-color: #1f3f37;
+  }
+
+  /* --- Desktop rules (stor skærm) --- */
+  @media (min-width: 1024px) {
+    /* Læg lidt plads til venstre for at give room til din left-decor/sidebar i Layout */
+    .page-content {
+      margin-left: 220px; /* justér hvis din sidebar er bredere/smaller */
+      padding-right: 3rem;
+    }
+
+    /* Gør første tekstblok (title/intro) og hero billede fuldbredde over kolonner */
+    .page-content > div:first-of-type {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Hero-billede (første img) fylder fuld bredde */
+    .page-content > img:first-of-type {
+      width: 100%;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* To-kolonne for Before / After sektion (de to på hinanden følgende divs) */
+    .page-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    /* Grundregel: alle direkte children default fuld bredde */
+    .page-content > div,
+    .page-content > img {
+      flex: 1 1 100%;
+    }
+
+    /* Slip de to "Before" og "After" divs side-by-side */
+    .page-content > div:nth-of-type(3),
+    .page-content > div:nth-of-type(4) {
+      flex: 1 1 calc(50% - 1rem);
+    }
+
+    /* Hvor du vil vise et billede ved siden af tekst (f.eks. senere sektioner) */
+    .page-content > div:nth-of-type(5) {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .page-content > div:nth-of-type(5) img {
+      flex: 0 0 48%;
+      margin: 0;
+    }
+    .page-content > div:nth-of-type(5) p {
+      flex: 1 1 48%;
+    }
+
+    /* Return-knap styling (hvis det er en .return class, ellers brug .cta eller giv knappen class) */
+    a.return {
+      display: inline-block;
+      background: #3b1f17;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 2rem;
+    }
+  }
+
+  /* --- Mobil (bevarer dine tidligere mobile regler) --- */
+  @media (max-width: 1023px) {
+    .page-content {
+      margin: 6rem 1rem 3rem;
+      padding: 0 1rem;
+    }
+
+    .page-content h1 {
+      font-size: 1.8rem;
+    }
+
+    .cta {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+
+    .Nordiclampsptext {
+      margin-left: 2px;
+      margin-top: 100px;
     }
   }
 </style>
