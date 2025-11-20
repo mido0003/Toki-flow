@@ -1,6 +1,7 @@
 ---
 const { company } = Astro.props;
 import ReadCases from "../components/ReadCases.astro";
+import Readsingleview from "../components/Readsingleview.astro";
 ---
 
 <article>
@@ -16,7 +17,7 @@ import ReadCases from "../components/ReadCases.astro";
     })}
   </ul>
  
-  <ReadCases />
+  <Readsingleview />
 </article>
 <style>
   article:not(:last-child) {
