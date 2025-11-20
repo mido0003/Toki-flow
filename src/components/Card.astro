@@ -4,38 +4,48 @@ import ReadCases from "../components/ReadCases.astro";
 ---
 
 <article>
-  <h2>{company.companyname}</h2>
-  <img
-    src=`https://qeoxxkgbtrpnlhjhgkqx.supabase.co/storage/v1/object/public/imgcases/${company.image}`
-    alt="case image"
-  />
-  <p>{company.description}</p>
-  <ul>
-    {
-      company.buycategory.map((cat) => {
-        return <li>{cat}</li>;
-      })
-    }
-  </ul>
+  <img src=`https://qeoxxkgbtrpnlhjhgkqx.supabase.co/storage/v1/object/public/imgcases/${company.image}` alt="case image" />
+  <p class="c-name">{company.companyname}</p>
 
+  <p>{company.description}</p>
+  <br>
+  <p>Purchased</p>
+  <ul>
+    {company.buycategory.map(cat => {
+      return <li>{cat}</li>
+    })}
+  </ul>
+ 
   <ReadCases />
 </article>
 <style>
   article:not(:last-child) {
     margin-bottom: 2rem;
   }
+ 
+  h4 {text-align: center;}
 
-  h2 {
-    text-align: center;
-  }
-
+ul{
+padding:  0;
+}
+@media (min-width: 768px) {
   ul {
-    padding: 1.5rem 0;
+    padding-top: 0.4rem;
+    padding-bottom: 1rem;
+   decoration: none;
+   font-size: 1.1rem;
   }
-  @media (min-width: 768px) {
-    ul {
-      padding: 2rem 0;
-    }
+  li {
+    text-decoration: none;
+    list-style-type: none;
   }
-</style>
-
+}
+@media (min-width: 768px) {
+img {
+margin: 1.2rem 0;
+}}
+.c-name{ font-size: 1rem;
+margin-left: 1.5rem;
+margin-bottom:0.3rem ;
+font-weight: lighter;}
+</style>  
