@@ -1,0 +1,143 @@
+<div class="Toki_container">
+  <img class="toki" src="/assets/toki-flow.png" alt="" />
+
+  <div class="vision">
+    <a href="/vision">Vision</a>
+  </div>
+  <div class="identity">
+    <a href="/identity">Identity</a>
+  </div>
+
+  <div class="strategy">
+    <a href="/strategy">Strategy</a>
+  </div>
+  <div class="solution">
+    <a href="/solution">Solution</a>
+  </div>
+  <div class="insight">
+    <a href="/insight">Insight</a>
+  </div>
+</div>
+<style>
+  .Toki_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .toki {
+    grid-column: 1/4;
+    grid-row: 1/4;
+    width: 70%;
+  }
+  .vision {
+    grid-column: 2/3;
+    grid-row: 1;
+    padding-top: 5rem;
+    padding-left: 6rem;
+  }
+  .identity {
+    grid-column: 2/3;
+    grid-row: 2;
+    padding-top: 9rem;
+    padding-left: 11.3rem;
+  }
+  .strategy {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding-top: 9rem;
+    padding-left: 18rem;
+  }
+  .solution {
+    grid-column: 1/2;
+    grid-row: 2;
+    padding-top: 8.9rem;
+    padding-left: 2rem;
+  }
+  .insight {
+    grid-column: 1/2;
+    grid-row: 1;
+    padding-top: 4.7rem;
+    padding-left: 9rem;
+  }
+  .insight a,
+  .solution a {
+    color: #fff8f1;
+  }
+
+  .vision a,
+  .identity a,
+  .strategy a {
+    color: #000000;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  /* --- MOBILE VERSION --- */
+  @media (max-width: 768px) {
+    .Toki_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    .toki {
+      grid-column: 1/4;
+      grid-row: 1/4;
+      width: 73%;
+      z-index: 1;
+
+      padding-left: 3rem;
+    }
+    .vision {
+      grid-column: 2/3;
+      grid-row: 1;
+      padding-top: 2.5rem;
+      padding-left: 4.5rem;
+      z-index: 2;
+    }
+    .identity {
+      grid-column: 2/3;
+      grid-row: 2;
+      padding-top: 5rem;
+      padding-left: 6.8rem;
+      z-index: 2;
+    }
+    .strategy {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      padding-top: 5rem;
+      padding-left: 13.5rem;
+      z-index: 2;
+    }
+    .solution {
+      grid-column: 1/2;
+      grid-row: 2;
+      padding-top: 5rem;
+      padding-left: 4rem;
+      z-index: 2;
+    }
+    .insight {
+      grid-column: 1/2;
+      grid-row: 1;
+      padding-top: 2.5rem;
+      padding-left: 7.5rem;
+      z-index: 2;
+    }
+
+    a {
+      font-size: 0.9rem;
+    }
+    p {
+      margin: 2rem;
+    }
+  }
+  .toki,
+  .vision,
+  .identity,
+  .strategy,
+  .solution,
+  .insight {
+    position: relative;
+  }
+</style>

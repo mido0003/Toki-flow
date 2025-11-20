@@ -1,0 +1,41 @@
+---
+const { company } = Astro.props;
+import ReadCases from "../components/ReadCases.astro";
+---
+
+<article>
+  <h2>{company.companyname}</h2>
+  <img
+    src=`https://qeoxxkgbtrpnlhjhgkqx.supabase.co/storage/v1/object/public/imgcases/${company.image}`
+    alt="case image"
+  />
+  <p>{company.description}</p>
+  <ul>
+    {
+      company.buycategory.map((cat) => {
+        return <li>{cat}</li>;
+      })
+    }
+  </ul>
+
+  <ReadCases />
+</article>
+<style>
+  article:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  ul {
+    padding: 1.5rem 0;
+  }
+  @media (min-width: 768px) {
+    ul {
+      padding: 2rem 0;
+    }
+  }
+</style>
+

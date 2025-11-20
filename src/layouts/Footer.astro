@@ -1,0 +1,96 @@
+<footer>
+  <div class="footer-left">
+    <div class="social-icons">
+      <img src="/assets/facebook.png" alt="Facebook" />
+      <img src="/assets/instagram.png" alt="Instagram" />
+
+      <p>© 2025 Tóki</p>
+    </div>
+  </div>
+
+  <div class="footer-m">
+    <p>About us</p>
+    <p>The founders of Tóki</p>
+  </div>
+
+  <div class="footer-right">
+    <h3>Contact</h3>
+    <p>
+      Phone: <br />
+      12 34 56 78
+    </p>
+    <p>Phone hours:</p>
+    <p>
+      Mon–Friday: 10:00–13:00 <br />
+      Satur–Sunday: Closed
+    </p>
+    <p>
+      E-mail: <br />
+      Tóki@contactemballage.com
+    </p>
+  </div>
+</footer>
+
+<style>
+  /* --- Footer --- */
+
+  footer {
+    background-color: #311407;
+    padding: 2rem;
+    z-index: 1; /* ligger bag sidebar */
+    flex-wrap: wrap;
+    color: #fff4f4;
+
+    /*margin-left: 6.3rem;*/
+  }
+
+  @media (min-width: 768px) {
+    footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer-left {
+      padding-left: 10.3rem;
+    }
+    .footer-m {
+      grid-column: 2;
+      padding-left: 6rem;
+    }
+    .footer-right {
+      grid-column: 3;
+    }
+
+    footer h3 {
+      font-size: 1.2rem;
+      color: #fff4f4;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  footer .social-icons img {
+    width: 25px;
+    margin-right: 10px;
+  }
+  @media (max-width: 768px) {
+    /* Footer justeres på mobil */
+
+    footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    footer .footer-left,
+    footer .footer-right {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    footer h3 {
+      font-size: 1rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+  }
+</style>

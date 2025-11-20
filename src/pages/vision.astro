@@ -1,0 +1,178 @@
+---
+import Layout from "../layouts/Layout.astro";
+import IdentityComponent from "../components/Identity.astro";
+import "../css/main.css";
+import Contact from "../components/Contact.astro";
+import ReturnFlow from "../components/ReturnFlow.astro";
+---
+
+<Layout>
+  <main>
+    <section class="vision-section">
+      <h1>Vision</h1>
+      <IdentityComponent />
+    </section>
+    <div class="line"></div>
+
+    <section class="main-section">
+      <section class="step-section">
+        <img src="/assets/image 7.webp" alt="" />
+        <div class="text-section">
+          <h3>1. Mapping Your Current Setup</h3>
+          <p>
+            We start with what you already know. We gather existing data,
+            observations, and experiences — and complement it with our
+            perspective on where your packaging works well and where there’s
+            potential. <br /><br />Examples include: production & logistics,
+            brand positioning, channels, sustainability goals.
+          </p>
+        </div>
+      </section>
+      <br />
+
+      <div class="line"></div>
+      <section class="section-2">
+        <div class="text-section">
+          <h3>2. Analyzing the Packaging Journey</h3>
+          <p>
+            We follow your packaging all the way from factory to consumer. We
+            examine how form, materials, and communication interact across
+            production, logistics, and customer experience. <br /><br />
+            The goal: pinpoint the areas where small changes can have the biggest
+            strategic and financial impact.
+          </p>
+        </div>
+
+        <img src="/assets/Group 45.webp" alt="" />
+      </section>
+
+      <br /><br />
+      <div class="line"></div>
+
+      <section class="step-section">
+        <img src="/assets/flow-3.webp" alt="" />
+        <div class="text-section">
+          <h3>3. Defining a Shared Direction</h3>
+
+          <p>
+            We outline the process, milestones, and decision points. <br /><br
+            /> This creates a shared vision of how we’ll work together, balancing
+            flexibility, pace, and clear direction.
+          </p>
+        </div>
+      </section>
+
+      <br /><br />
+      <div class="line"></div>
+      <div class="investment">
+        <h2>Investment</h2>
+        <p>
+          From DKK 25–30,000, depending on scope and number of packaging
+          projects. More than a cost — it’s the foundation for lasting design,
+          production, and storytelling.
+        </p>
+      </div>
+      <div class="contact-button">
+        <Contact />
+      </div>
+      <div class="flow-button">
+        <ReturnFlow href="/flow">&lt;-- Return</ReturnFlow>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .main-section {
+      margin-left: 16rem;
+      margin-right: 10rem;
+    }
+    .vision-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* H1 | IMG */
+
+      align-items: center;
+      padding-left: 20rem;
+    }
+
+    .vision-section h1 {
+      font-size: 3rem; /* Justér som du vil */
+      margin-left: 8rem; /* matcher dit screenshot */
+    }
+    .step-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* IMG | TEXT */
+      grid-template-rows: 1fr;
+      align-items: center;
+      gap: 4rem;
+    }
+    .step-section img {
+      width: 350px;
+      border-radius: 8px;
+    }
+    .text-section {
+      padding-bottom: 13rem;
+    }
+    p {
+      padding-top: 3rem;
+    }
+    .section-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* IMG | TEXT */
+      grid-template-rows: 1fr;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .line {
+      height: 2px; /* Tykkelse */
+      background-color: black; /* Sort linje */
+      width: 100%; /* Fuldbredde */
+      margin: 20px 0; /* Lidt afstand */
+    }
+    .investment p {
+      padding-top: 1rem;
+      margin-right: 32rem;
+      padding-bottom: 3rem;
+    }
+    .contact-button {
+      padding-left: 42rem;
+      padding-bottom: 5rem;
+    }
+    .flow-button {
+      padding-bottom: 5rem;
+    }
+    img {
+      width: 78%;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        padding-top: 13rem;
+        padding-left: 20rem;
+        padding-bottom: 3rem;
+      }
+      img {
+        width: 400px;
+        padding-left: 9rem;
+        padding-top: 2rem;
+      }
+      h3 {
+        padding-left: 9rem;
+      }
+      p {
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+      section {
+        padding-bottom: 4rem;
+      }
+      .flow-button {
+        padding-left: 5rem;
+        padding-top: 4rem;
+      }
+      .contact-button {
+        padding-left: 18rem;
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</Layout>
