@@ -1,0 +1,150 @@
+<!-- SIDEBAR / HEADER -->
+<header>
+  <aside class="sidebar">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/">
+        <img src="/assets/logo.png" alt="Logo" />
+      </a>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu-icon">
+      <nav>
+        <a href="/flow">Tokis flow</a>
+        <a href="/cases">Cases</a>
+        <a href="/about">About us</a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Wave baggrund -->
+  <div class="wave"></div>
+</header>
+
+<style>
+  /* ---------------------- */
+  /* HEADER / SIDEBAR       */
+  /* ---------------------- */
+  header {
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .sidebar {
+    position: fixed;
+    z-index: 3;
+    height: 100vh; /* fylder hele viewport højde */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 1rem;
+  }
+
+  /* Logo */
+  .logo img {
+    max-width: 90px;
+    height: auto;
+    display: block;
+  }
+
+  /* Menu */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding-left: 1rem;
+    margin-top: 2rem;
+    position: relative; /* sikrer klikbarhed */
+    z-index: 4;
+  }
+
+  .menu-icon nav {
+    display: flex;
+    flex-direction: column; /* desktop: stacked */
+    gap: 15px; /* afstand mellem links på desktop */
+    margin-top: 20px;
+  }
+
+  .menu-icon nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .menu-icon nav a:hover {
+    color: #a9d0c1;
+  }
+
+  /* Wave bag sidebar */
+  .wave {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12%;
+    height: 100vh;
+    background: url("/assets/green.png") repeat-y;
+    background-size: cover;
+    z-index: 2;
+  }
+
+  /* ---------------------- */
+  /* MOBILE ADJUSTMENTS      */
+  /* ---------------------- */
+  @media (max-width: 768px) {
+    header {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar {
+      height: auto;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    .logo img {
+      max-width: 117px;
+      height: auto;
+      display: block;
+    }
+
+    .menu-icon {
+      margin-top: 0;
+      padding-left: 0;
+      flex-direction: row; /* links i række */
+      gap: 1.5rem; /* afstand mellem links på mobilen */
+      z-index: 4;
+    }
+
+    .menu-icon nav {
+      flex-direction: row;
+      gap: 1.5rem; /* afstand mellem links */
+      margin-top: 0;
+      padding-left: 20rem;
+    }
+
+    .menu-icon nav a {
+      font-size: 16px;
+      margin-bottom: 0;
+      color: #ffffff;
+    }
+    .menu-icon nav a:hover {
+      color: #a9d0c1;
+    }
+    .wave {
+      width: 100%;
+      height: 164px;
+      background: url("/assets/green.png") repeat-x;
+      background-size: cover;
+      z-index: 1;
+    }
+  }
+</style>

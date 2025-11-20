@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Contact from "../components/Contact.astro";
+import "../css/main.css";
+import { pathHasLocale } from "astro:i18n";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const url = "https://qeoxxkgbtrpnlhjhgkqx.supabase.co/rest/v1/Cases?";
+
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFlb3h4a2didHJwbmxoamhna3F4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5NTAwNjgsImV4cCI6MjA3ODUyNjA2OH0.6_XM-4eljkeXa7wm8GXbTRTDW6-kYUAbBqbB8aAQeic";
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+console.log(data);
+---
+
+<Layout>
+  <main>
+    <section class="intro-cases">
+      <div class="grid-cases">
+        <div class="grid-p1">
+          <h1>Cases</h1>
+
+          <p>
+            Every product has a journey — and packaging plays a big part in how
+            that story is told.
+          </p>
+          <p>
+            We could tell you all about our process, our passion, and our
+            precision -but we’d rather let the work speak for itself.
+          </p>
+        </div>
+        <div class="grid-p2">
+          <img class="img-case" src="/assets/img-packaging.webp" alt="" />
+        </div>
+      </div>
+      <p class="citat-1">
+        <i
+          >“Tóki helped us reimagine the packaging for our handcrafted lamps -
+          from bulky boxes to elegant, space-efficient designs that reflect our
+          brand’s warmth and light. Our customers noticed immediately.”</i
+        >
+      </p>
+      <p class="citat-2">— Lina K., Founder of Lumora Lighting</p>
+    </section>
+
+    <section class="cases">
+      {data.map((company) => <Card {company} />)}
+    </section>
+    <!-- <p>-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+
+    <Contact />
+  </main>
+</Layout>
+<style>
+  main {
+    padding: 2rem 0;
+  }
+
+  h1 {
+    padding-top: 12rem;
+    text-align: center;
+  }
+
+  .intro-cases {
+    padding-top: 1.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  .img-case {
+    padding-top: 2rem;
+  }
+  .cases {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding-bottom: 2rem;
+  }
+  .citat-1,
+  .citat-2 {
+    text-align: center;
+    place-items: center;
+  }
+  .citat-1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight:;
+  }
+  .citat-2 {
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid-cases {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding-left: 3rem;
+      padding-right: 2rem;
+    }
+    .h1 {
+      align-self: start start;
+    }
+    .cases {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.3rem;
+      padding: 4rem;
+    }
+    .img-case {
+      object-fit: cover;
+    }
+    main {
+      margin-left: 10rem;
+    }
+    .img-case {
+      max-width: 40rem;
+    }
+    .citat-1 {
+      margin-top: 3rem;
+      padding-left: 18rem;
+      padding-right: 18rem;
+    }
+  }
+</style>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1038.15 1046.13">
+  <defs>
+    <style>
+      .d {
+        letter-spacing: 0em;
+      }
+
+      .e {
+        fill: url(#b);
+        stroke: #020202;
+      }
+
+      .e, .f, .g {
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .h {
+        fill: #fff;
+      }
+
+      .f, .i {
+        fill: #231f20;
+      }
+
+      .f, .g {
+        stroke: #231f20;
+      }
+
+      .j {
+        letter-spacing: -.02em;
+      }
+
+      .k {
+        letter-spacing: -.04em;
+      }
+
+      .l {
+        letter-spacing: -.04em;
+      }
+
+      .i {
+        font-family: Nunito-SemiBold, Nunito;
+        font-size: 72px;
+        font-weight: 600;
+      }
+
+      .g {
+        fill: url(#c);
+      }
+    </style>
+    <linearGradient id="b" x1="773.96" y1="75.35" x2="866.6" y2="843.01" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fef1ee"/>
+      <stop offset=".39" stop-color="#fef1ee"/>
+      <stop offset=".39" stop-color="#fbe4e0"/>
+      <stop offset=".41" stop-color="#f7cec6"/>
+      <stop offset=".41" stop-color="#f6c6bd"/>
+      <stop offset=".97" stop-color="#f6c6bd"/>
+    </linearGradient>
+    <linearGradient id="c" x1="216.06" y1="137.29" x2="557.37" y2="1044.97" gradientUnits="userSpaceOnUse">
+      <stop offset=".17" stop-color="#582510"/>
+      <stop offset=".18" stop-color="#ad4c25"/>
+      <stop offset=".7" stop-color="#ae4b26"/>
+      <stop offset=".7" stop-color="#b95530"/>
+      <stop offset=".71" stop-color="#f08564"/>
+    </linearGradient>
+  </defs>
+  <polygon class="h" points="790.32 838.72 292.45 839.05 169.61 333.83 575.91 62.27 921.69 366.39 790.32 838.72"/>
+  <path class="e" d="M789.99,838.12s155.13-24.13,213.71-140.39c11.08-21.99,31.07-70.52,25.36-130.95-1.77-18.71-12.38-76.08-50.73-129.99-35.8-50.35-52.73-71.35-52.73-71.35,0,0,6.01-20.85,11.41-43.18,16.02-66.31,23.78-159.37-24.75-216.43-38.55-45.33-92.04-55.52-134.71-63.64-87.06-16.58-167.41,6.1-201.11,19.28l345.24,304.94-131.36,472.33"/>
+  <line class="f" x1="169.61" y1="333.83" x2="575.91" y2="62.27"/>
+  <path class="g" d="M576.44,61.09C417.35-8.57,252.5-11.8,193.23,64.34c-39.81,51.13-41.28,114.67-41.28,114.67-3.13,67.13,14.92,152.71,14.92,152.71l-12.57,10.1C92.18,391.72,2.14,500.82,6.12,588.45c4.05,89.27,74.66,150.46,99.34,171.84,0,0,59.76,68.18,150.06,78.5,10.15,1.16,34.5,3.64,34.5,3.64,16.81,29.6,41.62,77.15,88.09,117.28,39,33.68,78.36,67.68,137.38,76.37,99.55,14.67,178.18-53.96,196.56-70.01,25.74-22.47,79.61-127.36,79.61-127.36l-.66-.77c-24.67,6.27-498.55,1.1-498.55,1.1-12.91-45.78-97.65-422.59-122.19-507.19"/>
+  <text/>
+  <text class="i" transform="translate(349.52 461.69)"><tspan class="l" x="0" y="0">T</tspan><tspan class="d" x="40.82" y="0">ÓKI F</tspan><tspan class="k" x="221.11" y="0">L</tspan><tspan class="j" x="258.19" y="0">O</tspan><tspan x="312.76" y="0">W</tspan></text>
+</svg>

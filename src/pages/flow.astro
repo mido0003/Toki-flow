@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FlowComponent from "../components/FlowComponent.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <main>
+    <h1>The Tóki Flow</h1>
+    <p>
+      Every packaging journey is unique. That’s why we’ve shaped our process
+      into five flexible phases - designed to meet you exactly where you are. <br
+      />
+      <br />
+      Explore each step below to see which one suits your needs best. You can choose
+      one phase or follow the full flow - whichever fits your needs best.
+    </p>
+    <div class="line"></div>
+    <h2>The Five Phases</h2>
+    <div class="flow-container">
+      <FlowComponent />
+    </div>
+    <p>
+      Toki flow Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin-top: 8rem;
+    padding-left: 12rem;
+    padding-right: 6rem;
+  }
+  h1,
+  h2 {
+    padding-left: 26rem;
+    padding-bottom: 2rem;
+  }
+  h1 {
+    color: #3a544a;
+  }
+  h2 {
+    color: #311407;
+  }
+  p {
+    padding-left: 16rem;
+    padding-right: 13rem;
+    padding-bottom: 4rem;
+  }
+  .line {
+    height: 2px; /* Tykkelse */
+    background-color: black; /* Sort linje */
+    width: 100%; /* Fuldbredde */
+    margin: 20px 0; /* Lidt afstand */
+  }
+  .flow-container {
+    padding-left: 16rem;
+    padding-bottom: 2rem;
+  }
+  /* MOBIL */
+  @media (max-width: 768px) {
+    main {
+      margin-top: 12rem;
+      padding-left: 8rem;
+    }
+    h1,
+    h2 {
+      padding-left: 8rem;
+    }
+    h1 {
+      color: #3a544a;
+    }
+    h2 {
+      color: #311407;
+    }
+
+    .line {
+      height: 2px;
+      background-color: #3a544a;
+      width: 100%;
+      margin: 20px 0;
+    }
+    p {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+    }
+    .flow-container {
+      padding-left: 0rem;
+      padding-bottom: 1rem;
+    }
+  }
+</style>
