@@ -1,152 +1,184 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Reset from "../CSS/reset.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <main>
-    <h1>Contact Us</h1>
-    <h2>Begin Your Packaging Journey with Tóki</h2>
-    <img
-      class="contact-img"
-      src="/assets/contactus.webp"
-      alt="an image of a cardboard box with let's create together written inside"
-    />
-    <p>Every packaging story starts with a conversation.</p>
-    <p>
-      Tell us a bit about your product, your goals, and where you are in your
-      packaging journey — we’ll tailor our approach to fit your needs. Whether
-      you’re looking for a full-scale solution or just one of our five Toki Flow
-      phases, we’re here to help you take the next step.
-    </p>
-    <p>
-      Fill out the following form and we will get back to you within 2 workdays.
-    </p>
-    <form>
-      <div class="from-qu">
-        <label for="name" class="required"> Name (required) </label>
-        <input type="text" id="name" name="name" required />
-      </div>
+    <main>
+        <h1>Contact Us</h1>
+        <h2>Begin Your Packaging Journey with Tóki</h2>
+        <img class="contact-img" src="/assets/contactus.webp" alt="an image of a cardboard box with let's create together written inside">
+        <p>Every packaging story starts with a conversation.</p>
+        <p> Tell us a bit about your product, your goals, and where you are in your packaging journey — we’ll tailor our approach to fit your needs. Whether you’re looking for a full-scale solution or just one of our five Toki Flow phases, we’re here to help you take the next step.</p>
+    <br><p class="info"><strong>Fill out the following form and we will get back to you 
+        within 2 workdays.</strong></p>
+        <form>
+            <div class="from-qu"> 
+<label for="name" class="required" > Name (required) </label>
+<input type="text" id="name" name="name" required/>
+ </div>
 
-      <div class="from-qu">
-        <label for="company"> Company Name </label>
-        <input type="text" id="company" name="company" />
-      </div>
+ <div class="from-qu"> 
+    <label for="company"> Company Name  </label>
+    <input type="text" id="company" name="company" >
+     </div>
 
-      <div class="from-qu">
-        <label for="contact" class="required"> Email (required)</label>
-        <input type="text" id="contact" name="contact" required />
-      </div>
+     <div class="from-qu"> 
+        <label for="contact" class="required" > Email (required)</label>
+        <input type="text" id="contact" name="contact" required/>
+         </div>
 
-      <div class="from-qu">
-        <label for="product">
-          Which product(s) do you need packaging for?
-        </label>
-        <input type="text" id="product" name="product " />
-      </div>
+         <div class="from-qu"> 
+            <label for="product"> Which product(s) do you need packaging for?  </label>
+            <input type="text" id="product" name="product " >
+             </div>
+             
+           <div class="from-qu"> 
+<label> Which Toki Flow phases are you interested in? </label>
+<div class="checkbox-group">
+    
+                <label><input class="button-form" type="button" name="phase" value="Vision"> </label>
 
-      <div class="from-qu">
-        <label> = Which Toki Flow phases are you interested in? </label>
-        <div class="checkbox-group">
-          <label
-            ><input
-              class="button-form"
-              type="button"
-              name="phase"
-              value="Vision"
-            />
-          </label>
+                <label><input class="button-form"  type="button" name="phase" value="Insight"> </label>
+                <label><input  class="button-form" type="button" name="phase" value="Identity"> </label>
+                <label><input class="button-form" type="button" name="phase" value="Strategy"> </label>
+                <label><input class="button-form" type="button" name="phase" value="Solution"> </label>
+                <label><input class="button-form" type="button" name="phase" value="Unsure"> </label>
+</div>
 
-          <label
-            ><input
-              class="button-form"
-              type="button"
-              name="phase"
-              value="Insight"
-            />
-          </label>
-          <label
-            ><input
-              class="button-form"
-              type="button"
-              name="phase"
-              value="Identity"
-            />
-          </label>
-          <label
-            ><input
-              class="button-form"
-              type="button"
-              name="phase"
-              value="Strategy"
-            />
-          </label>
-          <label
-            ><input
-              class="button-form"
-              type="button"
-              name="phase"
-              value="Solution"
-            />
-          </label>
-          <label
-            ><input
-              class="button-form"
-              type="button"
-              name="phase"
-              value="Unsure"
-            />
-          </label>
-        </div>
+<div class="form-group">
+    <label for="goals">Tell us a bit more about your project or goals</label>
+    <textarea id="goals" name="goals" rows="5"></textarea>
+</div>
 
-        <div class="form-group">
-          <label for="goals"
-            >Tell us a bit more about your project or goals</label
-          >
-          <textarea id="goals" name="goals" rows="5"></textarea>
-        </div>
+ <button class="submit" type="submit">Submit</button>
 
-        <button type="submit">Submit</button>
-      </div>
+        </form>
+    
 
-      label
-    </form>
-  </main>
 
-  <style>
-    h1 {
-      padding-top: 11rem;
-      text-align: center;
+    </main>
+    
+</Layout>
+
+<style>
+    @media (max-width: 768px) {
+    h1 {padding-top: 11rem;
+    text-align: center;}}
+    h2{
+        text-align: center;
     }
-    h2 {
-      text-align: center;
-    }
-    * {
-      margin-left: 1rem;
-    }
+ main {padding: 1rem;}
     label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
+            display: block; 
+    
+     }
+     form {
+        background-color: rgb(169, 208, 193, 0.6);
+        border-radius: 0.4rem;
+        /* margin: 1rem 1rem; */
+        padding: 1rem 0.5rem;
+        text-align: center;
+       
+     }
+
+     .label{
+        font-weight: lighter;
+     }
+     .contact-img {
+        max-height:20rem;
+        display: flex;
+        margin: auto;
+       
+     }
+
+     input[type=text] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+.button-form{
+    background-color: rgb(49, 20, 7, 0.85);
+color: #f4eeeb;
+border-radius: 0.4rem;
+padding: 0.7rem;
+border: none;
+width: 80%;
+
+}
+.checkbox-group{
+    /* display: flex;
+    flex-direction: column;*/
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+margin: 2rem 0;} 
+
+#goals {
+background-color: #FFF8F1;
+padding: 10px;
+  margin: 10px 0;
+  border-radius: 0.3rem;
+  border: none;
+  width: 70%;
+  margin-top: 0.5rem;
+}
+
+.submit {
+    background-color: #3A544A;
+    border-radius: 0.4rem;
+    padding: 0.7rem;
+    color: antiquewhite;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.info {}
+@media (min-width: 768px) {
+    main {
+        margin-left: 9rem;
+        
+    }
+
+    h1{margin-top: 3rem;
+        margin-bottom: 2rem;
+        text-align: center;}
+        h2 {
+            margin: 2.5rem 0;
+        }
+    .contact-img {
+        object-fit: cover;
+        width: 35rem;
+        height: 35rem;
+        margin-bottom: 1.5rem;
     }
     form {
-      background-color: #a9d0c1;
+        max-width: 40rem;
+       margin: auto;
+       margin-top: 3rem;
+       margin-bottom: 3rem;
+        justify-content: center;
+        align-self: center;
+     
     }
-    .contact-img {
-      max-height: 20rem;
-      width: 25rem;
-      display: flex;
-      margin: auto;
+    .button-form{
+        width: 50%;
     }
-
-    .button-form {
-      background-color: #311407;
-      color: #f4eeeb;
-      border-radius: 0.3rem;
-      padding: 0.7rem;
-      font-family: Nunito Sans;
-    }
-  </style></Layout
->
+    input[type=text] {
+  width: 65%;
+  background-color: #FFF8F1;
+}
+    p {width: 60ch;
+    margin: auto;}
+}
+</style>
